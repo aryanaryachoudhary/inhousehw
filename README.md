@@ -1,1 +1,1 @@
-A simple web-server application that scrapes specified information from a using the url of the website. It then uses OpenAI API to generate a description of the website/company using the information being scraped.
+A simple web-server application that scrapes specified information from a website using the url of the website. It then uses OpenAI API to generate a description of the website/company using the information being scraped.
