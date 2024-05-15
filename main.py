@@ -43,13 +43,6 @@ async def scrape_website(website: Website):
         except NoSuchElementException:
             return None
 
-    # def get_meta_content(driver, name):
-    #     element = find_element(driver, By.XPATH, f'//meta[@name="{name}"]')
-    #     return element.get_attribute('content') if element else None
-
-    # def get_itemprop_content(driver, itemprop):
-    #     element = find_element(driver, By.XPATH, f'//*[@itemprop="{itemprop}"]')
-    #     return element.get_attribute('content') if element else None
 
     def get_link_href(driver, link_texts):
         # First, try to find the footer element
@@ -66,7 +59,7 @@ async def scrape_website(website: Website):
                     continue
         return None
 
-    # product_description = get_meta_content(driver, 'description')
+ 
     company_name = driver.title  # Get the title of the webpage
 
     privacy_policy = get_link_href(driver, ['Privacy Policy', 'Privacy', 'Privacy Notice', 'Privacy Statement'])
@@ -74,12 +67,7 @@ async def scrape_website(website: Website):
 
     driver.quit()
 
-    # # use Google to search for the legal name of the company
-    # driver = webdriver.Chrome(service=webdriver_service)
-    # driver.get(f'https://www.google.com/search?q={company_name} legal name')
 
-    # # Try to get the legal name from the first search result
-    # legal_name = find_element(driver, By.CSS_SELECTOR, '.g .rc .s .st').text
 
     driver.quit()
 

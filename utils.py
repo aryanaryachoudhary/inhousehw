@@ -9,9 +9,6 @@ client = OpenAI(
 
 
 
-
-
-
 def generate_description(input):
     messages = [
         {"role": "user",
